@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Staatliches&display=swap');
+
+
+.App {
+  text-align: center;
+}
+
+
+.base-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans Condensed', sans-serif;
+  align-items: center;
+  background-color: #379683;
+  color: #EDF5E1;
+  padding-bottom: 50px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px auto;
+}
+
+header {
+  padding: 0.5rem;
+  font-size: 3rem;
+  font-weight: bond;
+  font-family: Staatliches;
+}
+
+p {
+  padding: 0 20px;
+  font-size: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  margin: 1rem;
+  width: 16em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+label {
+  font-size: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  min-width: 30em;
+  height: 37px;
+  padding: 0px 10px;
+  background-color: #f3f3f3;
+  border: 0;
+  border-radius: 4px;
+  transition: all 250ms ease-in-out;
+}
+
+input:focus-within {
+  outline: none;
+  box-shadow: 0px 0px 12px 0.8px #0e81ce96;
+}
+
+.footer {
+  margin-top: 1em;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  margin: 5px 10px;
+  height: 30px;
+  background-color: #05386B;
+  transition: all 250ms ease-in-out;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  width: 170px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+background-color: #2386c8;
+}
+
+.btn:focus {
+  outline:none;
+}

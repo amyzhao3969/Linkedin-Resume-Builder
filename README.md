@@ -39,4 +39,8 @@ Once the above steps are finished, you can start to enjoy the app by running
 npm start
 ```
 
+#### Input your linkedin URL
+![step1](/client/src/slide1.png)
 
+#### Download the customized word doc once it finishes loading
+![step2](/client/src/slide2.png)

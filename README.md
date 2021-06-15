@@ -34,6 +34,9 @@ Input your API losthost endpoint
 REACT_APP_API_ENDPOINT=http://localhost:5000
 ```
 
-
+Once the above steps are finished, you can start to enjoy the app by running
+```
+npm start
+```
 
 

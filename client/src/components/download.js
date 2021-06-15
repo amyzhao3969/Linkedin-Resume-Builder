@@ -27,7 +27,7 @@ export default class WithFileLoading extends React.Component {
     //   }
     componentDidMount() {
             function runInterval (user_id, state) { 
-                let url = "http://localhost:3001/output?user_id=" + user_id;
+                let url = process.env.REACT_APP_API_ENDPOINT + `/output?user_id=` + user_id;
                 console.log(url);
                 var myFetch = {
                     // mode: "no-cors",
@@ -67,7 +67,7 @@ export default class WithFileLoading extends React.Component {
     }
  
     render() {
-        let url = "http://localhost:3001/download?user_id=" + this.state.user_id
+        let url = process.env.REACT_APP_API_ENDPOINT + "/download?user_id=" + this.state.user_id
         console.log("hi")
         console.log(this.state.isLoading)
         return (

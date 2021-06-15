@@ -17,7 +17,21 @@ cd linkedin-resume-builder
 
 for both the Frond-End and the Back-End
 ```
-npm run setup
+npm install
+```
+
+Create a .env file in the root directory of server folder
+Input your linkedin log in email, password and local host port 
+```
+EMAIL=yourLinkedinEmailAddress
+PW=yourLinkedinPassword
+PORT=5000
+```
+
+Create a .env file in the root directory of the client folder
+Input your API losthost endpoint
+```
+REACT_APP_API_ENDPOINT=http://localhost:5000
 ```
 
 

@@ -30,7 +30,7 @@ class SubmitForm extends React.Component {
         // console.log(formData)
         let jsonString = this.state.linkedinURL;
         console.log(jsonString);
-        fetch("http://localhost:3001/requesttocreate", {
+        fetch((process.env.REACT_APP_API_ENDPOINT + "/requesttocreate"), {
             crossDomain:true,
             mode:'no-cors',
             method: 'POST',
@@ -46,7 +46,7 @@ class SubmitForm extends React.Component {
             <div className='base-container'>
                 <div className='header'>
                     <div className='content'>
-                        <form action="http://localhost:3001/requesttocreate" method="post" onSubmit={this.handleSubmit}>
+                        <form action={process.env.REACT_APP_API_ENDPOINT + "/requesttocreate"} method="post" onSubmit={this.handleSubmit}>
                             <label>
                                 Name:
                                 <input type='text' value={this.state.name} name="name" onChange={this.handleChange}/>

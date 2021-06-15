@@ -5,6 +5,8 @@ import WithFileLoading from "./components/download";
 import { Container, Col, Row } from 'react-bootstrap/'
 import "./App.css";
 
+require("dotenv").config()
+
 export default class App extends React.Component {
   constructor(props) {
       super(props);
@@ -39,7 +41,7 @@ export default class App extends React.Component {
       // const formData = new FormData(event.target.linkedinURL);
       // console.log(formData)
       let jsonString = this.state.linkedinURL;
-      fetch("http://localhost:3001/requesttocreate", {
+      fetch(process.env.REACT_APP_API_ENDPOINT + "/requesttocreate", {
           crossDomain:true,
           mode:'no-cors',
           method: 'POST',

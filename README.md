@@ -7,6 +7,10 @@ The Node and Express serve as an API, and it interacts with the React.
 * Front-End (client directory) is a single page application using React, React Bootstrap
 * Back-End (server directory) includes Node.js, Express, API logic needed by the application
 
+## Demo
+![demo](/client/src/demo.gif)
+
+
 ## Getting Started
 #### Clone this project
 ```

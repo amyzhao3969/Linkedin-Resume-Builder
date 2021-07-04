@@ -1,17 +1,23 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { withHooksHOC } from './withHooksHOC';
 import slide_1 from '../slide1.png';
 import slide_2 from '../slide2.png';
 import "./style.css";
+
 import { Carousel, Container, Col, Row, Image } from 'react-bootstrap/'
 
+interface IHooksHOCProps {
+  width: number;
+}
 
-export default class Introduction extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class Introduction extends React.Component<IHooksHOCProps> {
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
+        console.log("width", this.props.width);
         return (
             <div>
                 <div>
@@ -26,34 +32,42 @@ export default class Introduction extends React.Component {
                 <div className='content'>
                     <p className="text-center">We've made it easy for you to generate a resume based on the content 
                         of your Linkedin profile.</p>
-                <div className="carousel">
-                    <Carousel style={{width: 500, height: 'auto'}}>
-                    <Carousel.Item style={{width: 500, height: 'auto'}} interval={1000}>
-                        <img
-                        className="d-block w-100"
-                        src={slide_1}
-                        alt="First slide"
-                        />
-                        <Carousel.Caption>
-                        <h3>Step 1</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item style={{width: 500, height: 'auto'}} interval={1000}>
-                        <img
-                        className="d-block w-100"
-                        src={slide_2}
-                        alt="Second slide"
-                        />
+                </div>
+                {this.props.width > 500 && (
+                    <>
+                    <div className='content'>
+                        <div className="carousel">
+                            <Carousel style={{width: 500, height: 'auto'}}>
+                            <Carousel.Item style={{width: 500, height: 'auto'}} interval={1000}>
+                                <img
+                                className="d-block w-100"
+                                src={slide_1}
+                                alt="First slide"
+                                />
+                                <Carousel.Caption>
+                                <h3>Step 1</h3>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                            <Carousel.Item style={{width: 500, height: 'auto'}} interval={1000}>
+                                <img
+                                className="d-block w-100"
+                                src={slide_2}
+                                alt="Second slide"
+                                />
 
-                        <Carousel.Caption>
-                        <h3>Step 2</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    </Carousel>
-                </div>
-                </div>
+                                <Carousel.Caption>
+                                <h3>Step 2</h3>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                            </Carousel>
+                        </div>
+                    </div>
+                </>
+            )}
             </div>
 
         );
     }
 }
+
+export default withHooksHOC(Introduction);

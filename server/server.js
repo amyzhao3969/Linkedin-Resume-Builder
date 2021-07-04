@@ -12,6 +12,8 @@ const __dirname = path.resolve();
 const PORT = process.env.PORT || 3001;
 var router = express.Router();
 
+
+console.log(`Your port is ${PORT}`);
 const app = express();
 
 app.use(express.json());
@@ -27,8 +29,8 @@ const options = {
   password: process.env.PW
 };
 
-console.log(process.env.EMAIL)
-console.log(process.env.PW)
+// console.log(process.env.EMAIL)
+// console.log(process.env.PW)
 
 app.get("/test", (req, res) => {
   res.send("Hi!");
@@ -47,7 +49,6 @@ app.post('/users', function (req, res) {
 });
 
 app.post('/requesttocreate', async function (req, res) {
-  console.log(req.body)
   console.log(Object.keys(req.body)[0]);
   let linkedinUrl = Object.keys(req.body)[0];
   let regex = /(?<=linkedin.com\/in\/)(.*)(?=\/)/;

@@ -11,7 +11,7 @@ The Node and Express serve as an API, and it interacts with the React.
 ![demo](/client/src/demo.gif)
 
 ## Responsive Web Design
-![demo_responsive](/client/src/demo_responsive.gif)
+![demo_responsive](/client/src/demo2.gif)
 
 ## Getting Started
 #### Clone this project

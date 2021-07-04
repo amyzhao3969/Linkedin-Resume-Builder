@@ -36,7 +36,7 @@ export default class App extends React.Component {
    
   handleSubmit(event) {
       event.preventDefault();
-      alert('A form was submitted: ' + this.state.linkedinURL);
+    //   alert('A form was submitted: ' + this.state.linkedinURL);
       // extract form data
       // const formData = new FormData(event.target.linkedinURL);
       // console.log(formData)
